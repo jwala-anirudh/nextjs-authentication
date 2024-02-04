@@ -47,6 +47,8 @@ const RegisterForm = () => {
       register(values).then((data) => {
         setError(data.error);
         setSuccess(data.success);
+
+        form.reset();
       });
     });
   };
@@ -70,7 +72,7 @@ const RegisterForm = () => {
                   <FormControl>
                     <Input
                       {...field}
-                      placeholder='Anirudh J'
+                      placeholder='Anirudh'
                       type='text'
                       disabled={isPending}
                     />
